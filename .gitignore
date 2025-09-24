@@ -1,12 +1,16 @@
-# Large data files
-data/customer_data.csv
+# Large data files - exclude from repo
+data/*.csv
 *.csv
 !data/samples/*.csv
 
 # Generated outputs
 out/*.txt
-logs/*.txt
+out/*.log
 
-# System files
+# Session logs
+logs/*.txt
+logs/*.log
+
+# Temp files
+*.tmp
 .DS_Store
-*~
