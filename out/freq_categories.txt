@@ -1,7 +1,0 @@
-  30027 "Electronics"
-  19989 "Clothing"
-  14925 "Books"
-  14822 "Food"
-  10123 "Health"
-   5079 "Home"
-   5035 "Beauty"

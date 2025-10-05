@@ -1,3 +1,0 @@
-  60138 "Regular"
-  29964 "Silver"
-   9898 "Gold"
