@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ============================================================================
 # run_pa4.sh - Sprint 4 Main Entry Script
 # Usage: ./run_pa4.sh <input_csv>
-# ============================================================================
 
 # Check arguments
 if [ $# -eq 0 ]; then
@@ -33,18 +31,13 @@ chmod -R g+rX "$INPUT" || true
 exec > >(tee -a "$LOGDIR/run_pa4.log")
 exec 2>&1
 
-echo "============================================================================"
 echo "Sprint 4: Customer Shopping Data Analysis Pipeline"
-echo "============================================================================"
 echo "Started: $(date)"
 echo "Input: $INPUT"
 echo "Output: $OUTDIR/"
-echo "============================================================================"
 echo ""
 
-# ============================================================================
 # ENGINEER 1: Data Cleaning & Normalization (Tasks 1-2)
-# ============================================================================
 
 echo "=== Engineer 1: Data Cleaning & Normalization ==="
 echo ""
@@ -85,9 +78,7 @@ echo "  ✓ Created skinny.tsv"
 
 echo ""
 
-# ============================================================================
 # ENGINEER 2: Quality Filters & Buckets (Tasks 3-4)
-# ============================================================================
 
 echo "=== Engineer 2: Quality Filters & Purchase Buckets ==="
 echo ""
@@ -107,9 +98,9 @@ echo "  ✓ Created buckets_summary.tsv"
 
 echo ""
 
-# ============================================================================
+
 # ENGINEER 3: Would add Tasks 5-6 here
-# ============================================================================
+
 
 # echo "=== Engineer 3: Regional Analysis & Signal Discovery ==="
 # echo ""
@@ -123,17 +114,13 @@ echo ""
 #
 # echo ""
 
-# ============================================================================
 # SUMMARY
-# ============================================================================
+# 
 
-echo "============================================================================"
 echo "Pipeline Complete!"
-echo "============================================================================"
 echo "Finished: $(date)"
 echo ""
 echo "Outputs created in $OUTDIR/:"
 ls -lh "$OUTDIR/" | tail -n +2
 echo ""
 echo "Log saved to: $LOGDIR/run_pa4.log"
-echo "============================================================================"
